@@ -1,0 +1,188 @@
+@font-face {
+  font-weight: normal;
+  font-family: Caption;
+  src: url("../fonts/pt-sans-caption-regular.woff2");
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: Caption;
+  src: url("../fonts/pt-sans-caption-bold.woff2");
+}
+
+* {
+	font-family: Caption;
+	font-weight: normal;
+}
+
+h1, h2, legend {
+	font-family: Caption;
+	font-weight: bold;
+	text-align: center;
+}
+
+h2 {
+	font-size: 1.6rem;
+}
+
+legend {
+	font-size: 1.3rem;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../img/background.jpg) no-repeat 0 0;
+  background-size: 100%;
+}
+
+form, .result {
+	background-color: white; /*#56a390f0*/
+	padding: 10px;
+	border-radius: 30px;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 20%;
+}
+
+fieldset {
+	border: none;
+}
+
+fieldset label {
+	font-weight: bold;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.parameters label {
+	font-size: 1.1rem;
+}
+
+.gender {
+	display: inline-block;
+	overflow: hidden;
+	margin: 0 25px;
+	padding: 0;
+}
+
+.gender-item {
+	display: inline-block;
+	float: left;
+}
+
+.gender input {
+	display: none;
+}
+
+.gender label {
+	display: inline-block;
+	padding: 0px 76px;
+	line-height: 34px;
+	border: 2px solid #ffb87b;
+	border-right: none;
+	user-select: none;
+}
+
+.gender-item:first-child label {
+	border-radius: 6px 0 0 6px;
+}
+
+.gender-item:last-child label {
+	border-radius: 0 6px 6px 0;
+	border-right: 2px solid #ffb87b;
+}
+
+.gender input:checked + label {
+	background: #ffb87b;
+}
+
+.gender label:hover {
+	color: #666;
+}
+
+.parameters {
+	column-count: 3;
+	margin: 30px 0;
+}
+
+.parameter {
+	width: 50px;
+}
+
+.parameter, .parameter-label {
+	margin-left: 30%;
+}
+
+.parameters span, .activities p {
+	color: #aaa;
+}
+
+.parameters input {
+	border: 2px #ffb87b solid;
+	border-radius: 3px;
+	width: 100%;
+}
+
+.activities p {
+	padding-left: 30px;
+}
+
+.activities input + label {
+	padding: 2px 0 0 30px;
+	background: url(../img/icon-radio-empty.svg) no-repeat 0 0;
+}
+
+.activities input:checked + label {
+	background: url(../img/icon-radio-checked.svg) no-repeat 0 0;
+}
+
+button {
+	margin: 2% 5%;
+	width: 150px;
+	height: 40px;
+	color: white;
+	background-color: #ffb87b;
+}
+
+.submit:disabled {
+	background-color: #dadada;
+	border: 2px #dadada solid;
+}
+
+.submit {
+	border: 2px #ffb87b solid;
+	border-radius: 5px;
+}
+
+.reset {
+	border: none;
+	background-color: white;
+	width: 250px;
+	margin-left: 0;
+	color: black;
+}
+
+.reset:disabled {
+	color: #ccc;
+}
+
+.result h3 {
+	font-weight: bold;
+	font-size: 25px;
+}
+
+.result li {
+	line-height: 1;
+}
+
+.result p {
+	font-size: 18px;
+}
+
+.return {
+	margin: 10px 71px;
+}

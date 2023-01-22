@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <link rel="preload" href="fonts/pt-sans-caption-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/pt-sans-caption-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Счётчик калорий</title>
+</head>
+<body class="page">
+    <main class="main">
+    <article>
+    <h1>
+        Счётчик калорий
+    </h1>
+    <form class="counter" name="counter" action="#" method="post">
+
+        <h2>
+            Пол
+        </h2>
+        <ul class="gender">
+            <li class="gender-item">
+                <input id="radio-1" type="radio" name="gender" value="1" checked>
+                <label for="radio-1">Мужчина </label>
+            </li>
+            <li class="gender-item">
+                <input id="radio-2" type="radio" name="gender" value="2">
+                <label for="radio-2">Женщина</label>
+            </li>
+        </ul>
+        <fieldset class="parameters">
+            <legend>
+                Физические параметры
+            </legend>
+            <div class="parameter-label">
+                <label>Возраст</label>
+                <span>лет</span>
+            </div>
+            <div class="parameter">
+                <input type="text" name="parameter" placeholder="0">
+            </div>
+            <div class="parameter-label">
+                <label>Рост</label>
+                <span>см</span>
+            </div>
+            <div class="parameter">
+                <input type="text" name="parameter" placeholder="0">
+            </div>
+            <div class="parameter-label">
+                <label>Вес</label>
+                <span>кг</span>
+            </div>
+            <div class="parameter">
+                <input type="text" name="parameter" placeholder="0">
+            </div>
+        </fieldset>
+        <fieldset  class="activities">
+        <legend>
+            Физическая активность
+        </legend>
+        <ul>
+            <li>
+            <div>
+                <input type="radio" id="activity-1" name="activity" hidden checked>
+                <label for="activity-1">
+                    Минимальная
+                </label>
+            </div>
+            <p>
+                Сидячая работа и нет физических нагрузок
+            </p>
+            </li>
+            <li>
+            <div>
+                <input type="radio" id="activity-2" name="activity" hidden>
+                <label for="activity-2">
+                    Низкая
+                </label>
+            </div>
+            <p>
+                Редкие, нерегулярные тренировки, активность в быту
+            </p>
+            </li>
+            <li>
+            <div>
+                <input type="radio" id="activity-3" name="activity" hidden>
+                <label for="activity-3">
+                    Средняя
+                </label>
+            </div>
+            <p>
+                Тренировки 3-5 раз в неделю
+            </p>
+            </li>
+            <li>
+            <div>
+                <input type="radio" id="activity-4" name="activity" hidden>
+                <label for="activity-4">
+                    Высокая
+                </label>
+            </div>
+            <p>
+                Тренировки 6-7 раз в неделю
+            </p>
+            </li>
+            <li>
+            <div>
+                <input type="radio" id="activity-5" name="activity" hidden>
+                <label for="activity-5">
+                    Очень высокая
+                </label>
+            </div>
+            <p>
+                Больше 6 тренировок в неделю и физическая работа
+            </p>
+            </li>
+        </ul>
+        </fieldset>
+
+        <button class="submit" name="submit" type="submit" disabled>
+            Рассчитать
+        </button>
+        <button class="reset" name="reset" type="reset" disabled>
+            	× Очистить поля
+        </button>
+    </form>
+
+    <section class="result" hidden>
+        <h2>
+            Ваша норма калорий
+        </h2>
+        <ul>
+            <li>
+                <h3>
+                <span class="normal_cal">3 800</span> ккал
+                </h3>
+                <p>
+                    поддержание веса
+                </p>
+            </li>
+            <li>
+                <h3>
+                <span class="weight_loss">3 300</span> ккал
+                </h3>
+                <p>
+                    снижение веса
+                </p>
+            </li>
+            <li>
+                <h3>
+                <span class="weight_gain">4 000</span> ккал
+                </h3>
+                <p>
+                    набор веса
+                </p>
+            </li>
+        </ul>
+        <button class="reset" name="reset" type="reset" onclick="resetButton.click()">
+            	× Очистить поля и вернуться к расчету
+        </button>
+    </section>
+    </article>
+  </main>
+  <script src="js/script.js"></script>
+</body>
+</html>
